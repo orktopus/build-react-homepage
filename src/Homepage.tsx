@@ -1,6 +1,6 @@
 import * as React from 'react';
 import "./Homepage.scss"
-import TextCard from './TextCard';
+import TextCard, { ITextCardProps } from './TextCard';
 import TagCard, { ITagCardProps } from './TagCard';
 import TimelineCard, { ITimelineCardProps } from './TimelineCard';
 
@@ -18,8 +18,7 @@ export class Homepage extends React.Component<IHomePageProps> {
                 <div className="home-page-content">
                     <div className="home-page-left-pane">
                         <TextCard
-                            title={this.getTitle()}
-                            description={this.getDescription()}
+                            {...this.getAboutMeInfo()}
                         ></TextCard>
                         <TimelineCard
                             {...this.getTimelineItems()}
@@ -73,12 +72,11 @@ export class Homepage extends React.Component<IHomePageProps> {
         }
     }
 
-    private getDescription(): string {
-        return "Hello, welcome to my page! I am a software developer at Microsoft and I am super excited to be here at Build this year!";
-    }
-
-    private getTitle(): string {
-        return "About Me"
+    private getAboutMeInfo(): ITextCardProps {
+        return {
+            title: "About Me",
+            description: "Hello, welcome to my page! I am a software developer at Microsoft and I am super excited to be here at Build this year!"
+        }
     }
 }
 
