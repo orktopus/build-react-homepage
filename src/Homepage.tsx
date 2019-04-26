@@ -1,6 +1,7 @@
 import * as React from 'react';
 import "./Homepage.scss"
-import AboutMe from './AboutMe';
+import TextCard from './TextCard';
+import TagCard, { ITagCardProps } from './TagCard';
 
 export interface IHomePageProps {
     userName: string;
@@ -13,12 +14,46 @@ export class Homepage extends React.Component<IHomePageProps> {
                 <div className="home-page-header">
                     <span>Welcome to {this.props.userName}'s homepage</span>
                 </div>
-                <AboutMe
-                    title={this.getTitle()}
-                    description={this.getDescription()}
-                ></AboutMe>
+                <div className="home-page-content">
+                    <div className="home-page-left-pane">
+                        <TextCard
+                            title={this.getTitle()}
+                            description={this.getDescription()}
+                        ></TextCard>
+                    </div>
+                    <div className="home-page-right-pane">
+                        <TagCard 
+                            {...this.getVisitedCountriesProps()} >
+                        </TagCard>
+                        <TagCard className="home-page-countries-to-vist"
+                            {...this.getCountriesWishListProps()} >
+                        </TagCard>
+                    </div>
+                </div>
             </div>
         );
+    }
+
+    private getCountriesWishListProps(): ITagCardProps {
+        const title = "Countries I wish to visit";
+        const tags = ["Germany", "China", "Brazil", "New Zealnd"];
+
+        return {
+            title: title,
+            tags: tags,
+            className: "home-page-countries-to-visit"
+        }
+    }
+
+    private getVisitedCountriesProps(): ITagCardProps {
+        const title = "Countries I have visited";
+        const tags = ["USA", "England", "Costa Rica", "Australia"];
+
+        return {
+            title: title,
+            tags: tags,
+            className: ""
+        }
     }
 
     private getDescription(): string {

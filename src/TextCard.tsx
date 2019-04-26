@@ -2,12 +2,12 @@ import * as React from 'react';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
 
-export interface IAboutMeProps {
+export interface ITextCardProps {
     description: string;
     title: string;
 }
 
-export class AboutMe extends React.Component<IAboutMeProps> {
+export class TextCard extends React.Component<ITextCardProps> {
     public render() {
         return (
             <Card
@@ -19,4 +19,4 @@ export class AboutMe extends React.Component<IAboutMeProps> {
     }
 }
 
-export default AboutMe;
+export default TextCard;

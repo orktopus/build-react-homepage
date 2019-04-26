@@ -8,3 +8,27 @@
   padding-bottom: 32px;
   flex: 0 0 auto;
 }
+
+.home-page-content {
+  padding-top: 24px;
+  display: flex;
+  flex: 1 1 auto;
+  overflow: auto;
+
+  .home-page-left-pane {
+    width: 60%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .home-page-right-pane {
+    width: 40%;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    height: 100%;
+
+    .home-page-countries-to-visit {
+      padding-top: 24px;
+    }
+  }
+}
