@@ -1,16 +1,14 @@
 import * as React from 'react';
-
+import "./Homepage.scss"
 export interface IHomePageProps {
-    pageHeader: string;
+    userName: string;
 }
+
 export class Homepage extends React.Component<IHomePageProps> {
-    constructor(props: IHomePageProps) {
-        super(props);
-    }
     public render() {
         return (
-            <div>
-                <p>Welcome to John Doe's Homepage! Enjoy your stay</p>
+            <div className="home-page-header">
+                <span>Welcome to {this.props.userName}'s homepage</span>
             </div>
         );
     }
