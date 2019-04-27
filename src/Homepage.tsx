@@ -1,7 +1,8 @@
 import * as React from 'react';
 import "./Homepage.scss"
-import TextCard from './TextCard';
+import TextCard, { ITextCardProps } from './TextCard';
 import TagCard, { ITagCardProps } from './TagCard';
+import TimelineCard, { ITimelineCardProps } from './TimelineCard';
 
 export interface IHomePageProps {
     userName: string;
@@ -17,9 +18,12 @@ export class Homepage extends React.Component<IHomePageProps> {
                 <div className="home-page-content">
                     <div className="home-page-left-pane">
                         <TextCard
-                            title={this.getTitle()}
-                            description={this.getDescription()}
+                            {...this.getAboutMeInfo()}
                         ></TextCard>
+                        <TimelineCard
+                            {...this.getTimelineItems()}
+                        >
+                        </TimelineCard>
                     </div>
                     <div className="home-page-right-pane">
                         <TagCard 
@@ -34,9 +38,21 @@ export class Homepage extends React.Component<IHomePageProps> {
         );
     }
 
+    private getTimelineItems(): ITimelineCardProps {
+        const timelineItems = [
+            "Came to the earth in 1980",
+            "Completed high school in 1998",
+            "Completed college in 2002",
+            "Joined Microsoft in 2003",
+        ]
+        return {
+            timelineItems: timelineItems
+        }
+    }
+
     private getCountriesWishListProps(): ITagCardProps {
         const title = "Countries I wish to visit";
-        const tags = ["Germany", "China", "Brazil", "New Zealnd"];
+        const tags = ["Germany", "China", "Brazil", "New Zealand"];
 
         return {
             title: title,
@@ -56,12 +72,11 @@ export class Homepage extends React.Component<IHomePageProps> {
         }
     }
 
-    private getDescription(): string {
-        return "Hello, welcome to my page! I am a software developer at Microsoft and I am super excited to be here at Build this year!";
-    }
-
-    private getTitle(): string {
-        return "About Me"
+    private getAboutMeInfo(): ITextCardProps {
+        return {
+            title: "About Me",
+            description: "Hello, welcome to my page! I am a software developer at Microsoft and I am super excited to be here at Build this year!"
+        }
     }
 }
 
