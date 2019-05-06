@@ -62,9 +62,9 @@ We have other changes that we can make on this site, but let's do them later. Le
 
 Before we deploy to Azure, we need to __build__ our code so that it is deployable to azure. We do this by simply running the followin in a new powershell window:
     $ cd C:\git\build-react-homepage
-    $ npm build
+    $ npm run build
 
-Remember to do "npm build" __before__ you deploy to Azure, to ensure your latest changes are deployed. (You can automate this; We will take a look at this later)
+Remember to do "npm run build" __before__ you deploy to Azure, to ensure your latest changes are deployed.
 
 **Step 4: Install Azure App Extension** :
 
@@ -111,3 +111,4 @@ Here are some resources for you to look at:
 
 1. React: https://reactjs.org/
 2. Ant Design: https://ant.design/components/tag/
+3. Visual Studio Code: https://code.visualstudio.com/
