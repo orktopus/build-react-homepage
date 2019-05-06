@@ -5,7 +5,7 @@ import { Homepage } from './Homepage';
 const App: React.FC = () => {
   return (
     <Homepage
-      userName="John Doe"
+      userName="Thor Odinson"
     ></Homepage>
   );
 }

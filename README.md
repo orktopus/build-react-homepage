@@ -44,7 +44,7 @@ At this point, your website is running on your local machine. You can check it o
 
      http://localhost:3000
 
-You can now see a very simple version of the website. Alas, it only has information about one John Doe....
+You can now see a very simple version of the website. Alas, it only has information about one Thor Odinson....
 
 **Step 3: Modify your website in vscode**
 Open a new powershell window, and run the following commands to open our code folder in vscode.
@@ -52,7 +52,7 @@ Open a new powershell window, and run the following commands to open our code fo
     $ cd C:\git\build-react-homepage
     $ code .
 
-Let's start by just modifying the header of the website. From the explorer pane, open "App.tsx" file. There you can see that the "userName" is set to "John Doe". Change this name to your own and you should see your website refresh shortly.
+Let's start by just modifying the header of the website. From the explorer pane, open "App.tsx" file. There you can see that the "userName" is set to "Thor Odinson". Change this name to your own and you should see your website refresh shortly.
 
 We have other changes that we can make on this site, but let's do them later. Let's first deploy this website to Azure, so we can share it with others.
 

@@ -40,10 +40,10 @@ export class Homepage extends React.Component<IHomePageProps> {
 
     private getTimelineItems(): ITimelineCardProps {
         const timelineItems = [
-            "Came to the earth in 1980",
-            "Completed high school in 1998",
-            "Completed college in 2002",
-            "Joined Microsoft in 2003",
+            "Born 1500 years ago",
+            "Met Jane Foster in 2011",
+            "Fought Chitauri Army in 2012",
+            "Destroyed Asgard (for good) in 2017",
         ]
         return {
             timelineItems: timelineItems
@@ -51,8 +51,8 @@ export class Homepage extends React.Component<IHomePageProps> {
     }
 
     private getCountriesWishListProps(): ITagCardProps {
-        const title = "Countries I wish to visit";
-        const tags = ["Germany", "China", "Brazil", "New Zealand"];
+        const title = "Places I wish to visit";
+        const tags = ["Georgia, USA", "St. Abbs"];
 
         return {
             title: title,
@@ -62,8 +62,8 @@ export class Homepage extends React.Component<IHomePageProps> {
     }
 
     private getVisitedCountriesProps(): ITagCardProps {
-        const title = "Countries I have visited";
-        const tags = ["USA", "England", "Costa Rica", "Australia"];
+        const title = "Places I have visited";
+        const tags = ["Asgard", "New York", "The nine realms"];
 
         return {
             title: title,
