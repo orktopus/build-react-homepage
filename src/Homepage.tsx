@@ -75,7 +75,7 @@ export class Homepage extends React.Component<IHomePageProps> {
     private getAboutMeInfo(): ITextCardProps {
         return {
             title: "About Me",
-            description: "Hello, welcome to my page! I am a software developer at Microsoft and I am super excited to be here at Build this year!"
+            description: "Hello, I am Thor Odinson! I am the strongest Avenger... don't let Hulk tell you otherwise"
         }
     }
 }
