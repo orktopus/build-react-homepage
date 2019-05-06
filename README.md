@@ -32,11 +32,11 @@ To clone the source code to a convenient location on your machine, do the follow
 
     $ mkdir C:\git
     $ cd C:\git
-    $ git clone https://github.com/orktopus/build-homepage-tutorial.git
+    $ git clone https://github.com/orktopus/build-react-homepage.git
 
 **Step 2: Run the website locally**
     
-    $ cd build-homepage-tutorial
+    $ cd build-react-homepage
     $ npm install
     $ npm start
 
@@ -81,7 +81,7 @@ Once the extension is installed, log into your Azure account - in the Activity B
 3. Type a unique name for your app (without spaces), such as <your-name>-homepage
 4. Choose a location in a region near you or near other services you may need to access.
 5. Choose your Node.js version, LTS is recommended.
-6. Choose the directory you have currently open (build-homepage-tutorial)
+6. Choose the directory you have currently open (build-react-homepage)
 7. Click Yes when prompted to update your configuration to run npm install on the target server. Your app is then deployed.
 8. Click yes to "Always deploy the workspace....", so that next time you change your website, the changes are automatically deployed to Azure
 9. Once the deployment completes, click Browse Website in the prompt to view your freshly deployed website.
