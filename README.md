@@ -2,7 +2,7 @@
 
 (Derived from https://code.visualstudio.com/tutorials/app-service-extension/getting-started, but simplified for starting up)
 
-This tutorial will walk you through how you can share your website with the rest of the world. In this tutorial, we will start with checking out a very simple project. We will first run this project in our own machine to see how it works, and make some changes as we like. Then we will deploy the website as an Azure App. Deploying an Azure app will allow us to share our website with others! We will also see how we can continue to make changes to our website even after it is deployed in Azure
+This tutorial will walk you through how you can share your website with the rest of the world. In this tutorial, we will start with checking out a very simple project. We will first run this project in our own machine to see how it works, and make some changes as we like. Then we will deploy a static website using Azure Storage. Deploying a static website to Azure Storage will allow us to share our website with others! We will also see how we can continue to make changes to our website even after it is deployed in Azure
 
 ## **Pre-requisites**:
 To complete this tutorial successfully and deploy your website you will need the following:
@@ -18,7 +18,7 @@ To complete this tutorial successfully and deploy your website you will need the
 In order to complete the tutorial, we will also touch upon a few other technologies. Here's a list of things that we will touch upon. Don't worry, you don't need to install all of them right away, we will install them along the way
 
 1. Github: Github is where our initial code will be. We will clone (copy) our code and make changes to it
-2. Azure App Service Extension: This will be a tool we will add-on to VS Code that will then help us deploy our website in azure
+2. Azure Storage Extension: This will be a tool we will add-on to VS Code that will then help us deploy our website in azure
 3. React: A framework for building UI
 4. Powershell: Tool to **run** our website locally
 
@@ -66,25 +66,23 @@ Before we deploy to Azure, we need to __build__ our code so that it is deployabl
 
 Remember to do "npm run build" __before__ you deploy to Azure, to ensure your latest changes are deployed.
 
-**Step 4: Install Azure App Extension** :
+**Step 4: Install Azure Storage Extension** :
 
 1. From "View" Menu, select "Extensions"
-2. Search and install "Azure App Service" extension
+2. Search and install "Azure Storage" extension
 
 **Step 5: Sign In to your Azure account**:
-Once the extension is installed, log into your Azure account - in the Activity Bar, click on the Azure logo to show the AZURE APP SERVICE explorer. Click Sign in to Azure... and follow the instructions.
+Once the extension is installed, log into your Azure account - in the Activity Bar, click on the Azure logo to show the Azure storage extension. Click Sign in to Azure... and follow the instructions.
 
 **Step 6: Deploy the website to azure**:
 
-1. In the AZURE APP SERVICE explorer, click the blue up arrow icon to deploy your app to Azure.
-2. Choose "Create New Web App"
-3. Type a unique name for your app (without spaces), such as <your-name>-homepage
+1. From the Explorer section in VSCode, right click on the "build" directory and click "Deploy to Static Website".
+2. Choose "Create New Storage Account"
+3. Type a unique name for your storage account (using only lower case letters and digits)
 4. Choose a location in a region near you or near other services you may need to access.
-5. Choose your Node.js version, LTS is recommended.
-6. Choose the directory you have currently open (build-react-homepage)
-7. Click Yes when prompted to update your configuration to run npm install on the target server. Your app is then deployed.
-8. Click yes to "Always deploy the workspace....", so that next time you change your website, the changes are automatically deployed to Azure
-9. Once the deployment completes, click Browse Website in the prompt to view your freshly deployed website.
+5. Choose index.html for starting page
+6. Leave error page blank
+7. Once the deployment completes, click Browse Website in the prompt to view your freshly deployed website.
 
 Congratulations! Your website is now deployed! Share it with a friend or a fellow coder to your right or left. And check out their website too!
 
